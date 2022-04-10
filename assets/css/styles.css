@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('./rules.css');
+@import url('./game.css');
+@import url('./contact.css');
+
+:root {
+    --header-height: 3.5rem;
+
+    /* COLORS */
+    --first-color: hsl(313, 100%, 50%);
+    --first-color-shape: hsl(53, 100%, 50%);
+    --title-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 0%);
+    --body-color: hsl(0, 0%, 100%);
+    --container-color: #fff;
+    --title-color-dark: hsl(0, 0%, 100%);
+    --text-color-dark: hsl(0, 0%, 0%);
+    --container-color-dark: hsl(41, 96%, 43%);
+
+    /* FONT */
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+    /* Z INDEX */
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 2rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: black;
+    /* overflow-x: hidden; */
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+.titulo {
+    width: 100%;
+    background-color: var(--body-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+.titulo-container {
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.titulo-logo {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.main {
+    position: relative;
+    background-color: var(--body-color);
+    transition: .4s;
+}
+
+.container {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.section {
+    padding: 4.5rem 0 1rem;
+}
+
+.section_height {
+    height: 100vh;
+}
+
+/* CHANGE HEADER */
+.scroll-header {
+    box-shadow: 0 1px 4px rgba(21, 21, 21, 0.1);
+}
+
+/* small device */
+@media screen and (max-width: 320px) {
+    .container {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+}
+
+/* large device */
+@media screen and (min-width: 1024px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }  
+  
+    .section {
+      padding: 7rem 0 2rem;
+    }
+  
+}

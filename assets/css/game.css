@@ -1,0 +1,101 @@
+@import url('./modal.css');
+
+.container-btns-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-black {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--text-color-dark);
+    color: var(--title-color);
+    border-radius: 12px;
+    display: inline-block;
+    padding: 10px 28px;
+    text-align: center;
+    border: none;
+    transition: 1s ease all;
+}
+
+.btn-black:hover{
+    color: rgb(191, 255, 241);
+}
+
+.disabled {
+    background-color: gray;
+    color: rgb(158, 158, 158);
+    transition: 1s;
+}
+
+.container-game {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-player{
+    width: 100%;
+    height: 100%;
+}
+
+.container-computer{
+    width: 100%;
+    height: 100%;
+}
+
+.carta {
+    width: 150px;
+    position: relative;
+    margin-left: -75px;
+    left: 100px;
+}
+
+#jugador-cartas,
+#computadora-cartas {
+    height: 240px;
+}
+
+/* RESPONSIVE */
+
+/* small device */
+@media screen and (max-width: 390px) {
+    .container-game {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carta {
+        width: 100px;
+        position: relative;
+        margin-left: -75px;
+        left: 100px;
+    }
+    
+    #jugador-cartas,
+    #computadora-cartas {
+        height: 200px;
+    }
+}
+  
+  /* medium device */
+@media (min-width: 390px) and (max-width: 767px) {
+    .container-game {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carta {
+        width: 120px;
+        position: relative;
+        margin-left: -75px;
+        left: 100px;
+    }
+    
+    #jugador-cartas,
+    #computadora-cartas {
+        height: 200px;
+    }
+}

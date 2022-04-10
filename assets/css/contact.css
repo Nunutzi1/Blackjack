@@ -1,0 +1,141 @@
+.content-contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.perfil {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(#E5F403, #E5F403);
+    animation: animate 3s linear infinite;
+}
+
+.perfil img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@keyframes animate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.perfil-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 155%;
+}
+
+.perfil-info h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.list-social{
+    justify-content: center;
+}
+
+.bxl-twitter {
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-twitter:hover {
+    background-color: rgb(232, 228, 228);
+    color: rgb(3, 200, 200);
+}
+
+.bxl-instagram-alt{
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-instagram-alt:hover {
+    background-color: rgb(232, 228, 228);
+    color: rgb(194, 0, 191);
+}
+
+.bxl-youtube {
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-youtube:hover{
+    background-color: rgb(232, 228, 228);
+    color: brown;
+}
+
+.bxl-github {
+    padding: 7px;
+    border-radius: 27%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bxl-github:hover {
+    background-color: rgb(232, 228, 228);
+    color: orange;
+}
+
+.perfil-info a {
+    text-decoration: none;
+    color: black;
+}
+
+.btnportfolio{
+    margin-top: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 10px 28px;
+    text-align: center;
+    border: none;
+    transition: 1s ease all;
+}
+
+.btnportfolio:hover{
+    background-color: var(--text-color-dark);
+    color: white;
+}
+
+/* RESPONSIVE */
+
+/* small device */
+@media screen and (max-width: 390px) {
+    .content-contact {
+        row-gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+  
+  /* medium device */
+@media (min-width: 390px) and (max-width: 767px) {
+    .content-contact {
+        row-gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
